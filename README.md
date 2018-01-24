@@ -1,6 +1,6 @@
-# ss
-### 搬瓦工搭建SS教程
-前言
+# 搬瓦工搭建SS教程
+
+## 前言
 
 作者写在前面的话：
 
@@ -26,7 +26,7 @@ ss免费账号分享：http://mnstar.me
 
 搭建SS教程
 
-一.购买搬瓦工VPS
+## 一.购买搬瓦工VPS
 
 首先我们打开：[搬瓦工官网](https://bwh1.net/aff.php?aff=19935)
 
@@ -79,7 +79,7 @@ ss免费账号分享：http://mnstar.me
 
 购买成功后我们会收到搬瓦工官方发来的邮件通知，登录我们注册时填写的邮箱即可看到，里面包含了搬瓦工VPS的各项信息，包含密码和端口。在以后每重装一次系统都会给我们发送邮件，大家请注意查收。
 
-然后登录我们刚刚购买的搬瓦工VPS管理后台
+## 然后登录我们刚刚购买的搬瓦工VPS管理后台
 
 点击：VPS Hosting 之后我们看到如下界面，我们在Services下拉菜单中点击My Services
 ![myservice](http://upload-images.jianshu.io/upload_images/8088606-2d3a112c1763b7c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
