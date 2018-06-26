@@ -86,3 +86,29 @@ wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubuserconten
 
 现在打开ss客户端，输入上面的服务器IP，端口，密码，加密方式就可以科学上网了
 
+### 3安装TCP加速软件
+
+前面虽然已经搭建好了 SS，但是因为服务器位于国外，连接速度会较慢，所以我们非常必要在服务器上安装 TCP 加速软件来提速。一般大家常用的 TCP 加速软件有锐速和 Google BBR 拥塞控制算法。
+
+PS：两者不能同时安装，大家根据自己的喜好选择其中一个安装即可！
+
+1、安装锐速请使用[《Vultr 专用破解版锐速一键安装脚本》](https://www.vultrcn.com/7.html)进行。（推荐这个）
+
+2、安装 BBR 请按照[《一键安装原版 & 魔改版 Google BBR 拥塞控制算法教程》](https://www.vultrcn.com/5.html)进行
+
+
+### 4获取一键安装脚本
+Windows 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtV2luZG93cy00LjAuOS56aXA=)；Macbook 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtTWFjT1MtMi42LjMuemlw)；Android 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtQW5kcm9pZC00LjUuMS5hcGs=)；
+
+iPhone/iPad 客户端：请通过 PP 助手安装 Shadowrocket，商店内同名应用为盗版。
+
+Windows 客户端若无法运行则请先安装 NET4.6.2 软件：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvTmV0LVdpbmRvd3MtNC42LjIuemlw)
+
+### 5修改Shadowsocks连接信息
+有时我们搭建完成后想要修改 ShadowsocksR 的连接信息，比如密码、端口等。我们可以使用下面的命令直接修改 ShadowsocksR 的连接信息而无需耗费时间重新搭建。
+```
+wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh && bash shadowsocks-libev.sh modify
+```
+运行命令后重新输入 Shadowsocks 的各项连接信息，然后使用新的连接信息进行连接即可
+
+
