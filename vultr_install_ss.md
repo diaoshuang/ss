@@ -1,5 +1,5 @@
 
-##vultr VPS的购买及搭建ss介绍，支持锐速加速优化
+## vultr VPS的购买及搭建ss介绍，支持锐速加速优化
 
 
 ### 1 购买vultr主机
@@ -9,42 +9,80 @@
 Vultr虽然成立时间不久，但是其背景实力还是比较雄厚的，基于全球最大的游戏服务器提供商之一的基础，所以才有实力开设这么多的数据中心。有速度较好的日本东京、洛杉矶等机房，也有我们很多人需要的欧洲机房等15个数据中心。Vultr采用小时计费，可以任意的删除和开通机器
 
 ![Vultr](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103181821831-235661580.png)
+
+#### 1.2 注册
+
+新用户注册 [vultr官网](https://www.vultr.com/?ref=7236384)，跳转到下图位置
+![注册](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182220503-1647212316.png)
+填写邮件地址、需要设置的密码（包括大写、小写字母和数字），点击Create即可
+
+#### 1.3 新用户验证
+
+注册后我们会收到一封vultr验证的邮件，我们点击相应的链接验证下即可。这一步一定要做，不然后面会出现问题
+
+#### 1.4 新用户激活
+
+验证并登陆后我们会跳转到充值界面，按照下图指示进行即可
+
+![激活](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182244706-925891540.png)
+
+#### 1.5 新机器创建
+
+激活之后我们点界面右上角的那个圆形的蓝色加号。
+1、首先是选择机器的位置，这里大家就按照自己的需要进行选择了，推荐的是东京（联通）、阿姆斯特丹（电信）、新加坡（移动）。但是也不能说绝对是这样，大家还是逐个位置进行测试，选择一个最好的。看不懂的地名就百度一下就好了
+
+![创建机器](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182308237-568652507.png)
+
+2、然后是系统类型，这里我们需要用到Debian里边的7 x64，所以选择这个就对了
+![系统类型](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182325909-374897141.png)
+
+3、接着是每个月的花费，我们选最低的那个$5/mo就好了，有2.5的就选2.5
+![花费](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182346128-615390028.png)
+
+4、其他的不需要更改，点击右下角的那个蓝色按钮就可以啦
+
+![部署](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182358378-1112887794.png)
+
+接着上面第4步，等待大概5分钟，然后进入机器详情页，一些信息我都给大家在下图中表示出来了
+
+![机器详情](https://images2017.cnblogs.com/blog/1044995/201801/1044995-20180103182421299-1951797957.png)
+
+
+### 2 搭建ss
+
+vps主机购买好之后，就可以搭建shadowsocks
+
+#### 2.1 终端连接vps主机
+
 ssh 连接vultr主机：
 
 ```
 ssh root@108.61.142.103
 ```
+输入主机密码，回车连接成功
 
-输入主机密码
+![连接vps](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626114646324-1418172715.png)
 
-获取一键安装脚本
+
+
+
+
+#### 2.2获取一键安装脚本
 
 ```
-
 wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh && bash shadowsocks-libev.sh
 
 ```
+![脚本](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104654121-812242597.png)
 
-按照下图输入ss的密码，端口，加密方式，最后回车进入安装
 
+回车后系统会自行下载脚本文件并运行 按照下图输入ss的密码，端口，加密方式，最后回车继续
 
-#==========================================================#
-# One Click Install Shadowsocks Server for CentOS & Debian #
-# Github: https://github.com/uxh/shadowsocks_bash          #
-# Thanks: https://github.com/teddysun/shadowsocks_install  #
-#==========================================================#
-Please Enter Shadowsocks's Password
-(Default: Number123890):
- 
-安装成功：
+![配置](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104829134-662917483.png)
 
-Congratulations, Shadowsocks-libev server install completed!
-------------------------------------------------------------
-Your Server IP        :  108.61.142.103 
-Your Server Port      :  5832 
-Your Password         :  Camelot!
-Your Encryption Method:  aes-256-cfb 
-------------------------------------------------------------
-ss://YWVzLTI1Ni1jZmI6Q2FtZWxvdCExMjNAMTA4LjYxLjE0Mi4xMDM6NTgzMg==
+安装完成后会出现下图所示界面。根据图中指示，我们将红框圈中的信息保存到记事本内
 
-[root@vultr ~]#
+![信息](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104850862-1308489913.png)
+
+现在打开ss客户端，输入上面的服务器IP，端口，密码，加密方式就可以科学上网了
+
