@@ -1,5 +1,6 @@
 # 搬瓦工搭建SS教程
 
+## [vultr搭建ss教程](https://github.com/wandou911/ss/blob/master/vultr_install_ss.md)
 ## 前言
 
 作者写在前面的话：
@@ -7,6 +8,7 @@
 应同学的要求在此分享搬瓦工搭建SS的教程，此教程只作为学习之用，因某些原因本教程不适合长期使用，在大家学习之后请删除所做的操作，谢谢。
 
 ss免费账号分享：http://mnstar.me
+
 
 关于[搬瓦工](https://bwh1.net/aff.php?aff=19935)（Bandwagonhost）
 
