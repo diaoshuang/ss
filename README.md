@@ -1,6 +1,7 @@
 # 搬瓦工搭建SS教程
 
-## [vultr搭建ss教程](https://github.com/wandou911/ss/blob/master/vultr_install_ss.md)
+## 附言：[vultr搭建ss教程](https://github.com/wandou911/ss/blob/master/vultr_install_ss.md)
+
 ## 前言
 
 作者写在前面的话：
