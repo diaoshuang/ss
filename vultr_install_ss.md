@@ -102,7 +102,7 @@ PS：两者不能同时安装，大家根据自己的喜好选择其中一个安
 ### 4获取一键安装脚本
 Windows 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtV2luZG93cy00LjAuOS56aXA=)；Macbook 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtTWFjT1MtMi42LjMuemlw)；Android 客户端：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvU2hhZG93c29ja3MtQW5kcm9pZC00LjUuMS5hcGs=)；
 
-iPhone/iPad 客户端：请通过 PP 助手安装 Shadowrocket，商店内同名应用为盗版。
+iPhone/iPad 客户端：请通过 PP 助手安装 Shadowrocket或者Wingy，商店内同名应用为盗版。
 
 Windows 客户端若无法运行则请先安装 NET4.6.2 软件：[点击下载](https://www.vultrcn.com/goto/?url=aHR0cHM6Ly9jdXJscy5mdW4vU2hhZG93c29ja3MvTmV0LVdpbmRvd3MtNC42LjIuemlw)
 
