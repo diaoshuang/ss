@@ -1,8 +1,8 @@
 
-## vultr VPS的购买及搭建ss介绍，支持锐速加速优化
+## [vultr](https://www.vultr.com/?ref=7236384) VPS的购买及搭建ss介绍，支持锐速加速优化
 
 
-### 1 [购买vultr主机]((https://www.vultr.com/?ref=7236384)
+### 1 [购买vultr主机](https://www.vultr.com/?ref=7236384)
 
 #### 1.1 Vultr简介
 
