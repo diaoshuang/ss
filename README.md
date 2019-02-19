@@ -31,7 +31,7 @@ ss免费账号分享：http://mnstar.me
 
 ## 一.购买搬瓦工VPS
 
-首先我们打开：[搬瓦工官网](https://bwh1.net/aff.php?aff=19935)
+首先我们打开：[搬瓦工官网](https://bwh8.net/aff.php?aff=19935)
 
 先不要去注册账号，先选择一个适合自己的VPS，这样的原因是为了跳过注册时的谷歌验证码（因搬瓦工官网采用的是谷歌验证码，所以验证码在国内是不显示的）
 
@@ -113,23 +113,15 @@ ss免费账号分享：http://mnstar.me
 友情提示：服务端 443 端口已经被屏蔽，请更换为其他端口 445，446 随便选都可以，不然无法访问油管
 ![port](http://upload-images.jianshu.io/upload_images/8088606-f8a410bd90e9ede9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 2019年 搬瓦工没有Shadowsocks Server这个选项了
+### 2019年 搬瓦工新用户没有Shadowsocks Server这个选项了
 
 ### 解决方法1
-若页面中没有Shadowsocks Server这一项，说明一键搭建SS功能被去掉了，这时候需要在当前浏览器的新标签中打开以下网址：
-[https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks](https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks)，打开以后就是安装页面，点击页面中的Install Shadowsocks Server安装即可(安装前提是服务器已打开已运行)。
 
-开始安装
-![](https://ws3.sinaimg.cn/large/006tKfTcly1g0bql68nc9j30p00jj3zr.jpg)
+1 登录搬瓦工后台，进入想要管理的VPS对应的KiviVM后台
 
-成功安装后如下：
-![](https://ws4.sinaimg.cn/large/006tKfTcly1g0bqmiwnapj30f30brdh9.jpg)
+2 如果你想安装Shadowsocks[请点这里](https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks)
 
-Go Back 后就能看到 shadowsocks 的连接信息了，如下图所示：
-
-![](https://ws2.sinaimg.cn/large/006tKfTcly1g0bqm2m98gj30l008lgm3.jpg)
-
-至此，ss服务器端就配置完成了！
+3 如果你想安装ShadowsocksR[请点这里](https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocksr)
 
 ### 解决方法2 命令行手动安装
 
