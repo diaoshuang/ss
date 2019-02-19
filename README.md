@@ -87,7 +87,7 @@ ss免费账号分享：http://mnstar.me
 点击：VPS Hosting 之后我们看到如下界面，我们在Services下拉菜单中点击My Services
 ![myservice](http://upload-images.jianshu.io/upload_images/8088606-2d3a112c1763b7c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-搬瓦工搭建SS教程
+
 
 点击My Services之后就会出现我们购买的VPS列表，在VPS列表的后面我们点击KiwiVM Control Panel，如图
 
@@ -103,30 +103,88 @@ ss免费账号分享：http://mnstar.me
 点击控制面板左侧的“Shadowsocks Server”
 ![shadowsocks server](http://upload-images.jianshu.io/upload_images/8088606-907995a02da90d66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-搬瓦工搭建SS教程
+
 
 ![complete](http://upload-images.jianshu.io/upload_images/8088606-462c661ba007f4eb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-搬瓦工搭建SS教程
+
 
 设置好以后请记住你的IP 跟协议类型 端口 密码（尽量不要给别人用....）
 
 友情提示：服务端 443 端口已经被屏蔽，请更换为其他端口 445，446 随便选都可以，不然无法访问油管
 ![port](http://upload-images.jianshu.io/upload_images/8088606-f8a410bd90e9ede9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-搬瓦工搭建SS教程
+### 2019年 搬瓦工没有Shadowsocks Server这个选项了
 
+### 解决方法1
+若页面中没有Shadowsocks Server这一项，说明一键搭建SS功能被去掉了，这时候需要在当前浏览器的新标签中打开以下网址：
+[https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks](https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks)，打开以后就是安装页面，点击页面中的Install Shadowsocks Server安装即可(安装前提是服务器已打开已运行)。
+
+开始安装
+![](https://ws3.sinaimg.cn/large/006tKfTcly1g0bql68nc9j30p00jj3zr.jpg)
+
+成功安装后如下：
+![](https://ws4.sinaimg.cn/large/006tKfTcly1g0bqmiwnapj30f30brdh9.jpg)
+
+Go Back 后就能看到 shadowsocks 的连接信息了，如下图所示：
+
+![](https://ws2.sinaimg.cn/large/006tKfTcly1g0bqm2m98gj30l008lgm3.jpg)
+
+至此，ss服务器端就配置完成了！
+
+### 解决方法2 命令行手动安装
+
+
+#### 2.1 终端连接vps主机
+
+ssh 连接vultr主机：
+
+```
+ssh root@108.61.142.103 -p 26185
+```
+输入主机密码，回车连接成功
+
+![连接vps](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626114646324-1418172715.png)
+
+
+
+#### 2.2获取一键安装脚本
+
+```
+wget --no-check-certificate -O shadowsocks-libev.sh https://raw.githubusercontent.com/uxh/shadowsocks_bash/master/shadowsocks-libev.sh && bash shadowsocks-libev.sh
+
+```
+![脚本](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104654121-812242597.png)
+
+
+
+回车后系统会自行下载脚本文件并运行 按照下图输入ss的密码，端口，加密方式，最后回车继续
+
+![配置](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104829134-662917483.png)
+
+安装完成后会出现下图所示界面。根据图中指示，我们将红框圈中的信息保存到记事本内
+
+![信息](https://images2018.cnblogs.com/blog/1044995/201806/1044995-20180626104850862-1308489913.png)
+
+现在打开ss客户端，输入上面的服务器IP，端口，密码，加密方式就可以科学上网了
+
+备注：wget 时提示 -bash:wget command not found,很明显没有安装wget软件包，输入命令安装wget
+
+```
+yum -y install wget
+```
+wget安装成功后回到步骤2.2
 
 电脑版SS软件下载
 
 ![software download](http://upload-images.jianshu.io/upload_images/8088606-52463b1956d35162.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-搬瓦工搭建SS教程
+
 
 ss设置 设置好右下角有个小飞机的图标右键启用
 
 PAC模式IP不变，全局代理ip会变成服务器IP
 
 ![setup](http://upload-images.jianshu.io/upload_images/8088606-b4a0d1eb9f288ddd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-搬瓦工搭建SS教程
+
 
 ![](http://upload-images.jianshu.io/upload_images/8088606-0d7be29e3680fc4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 搬瓦工搭建SS教程
@@ -145,4 +203,12 @@ PAC模式IP不变，全局代理ip会变成服务器IP
 
 本教程学习成功后请及时删除，本文原创文章如需转载请注明出处，谢谢！
 
-相关链接：[vultr ss搭建指南](http://www.cnblogs.com/mnstar/p/8142885.html)
+### 相关链接：
+
+1 [vultr ss搭建指南](http://www.cnblogs.com/mnstar/p/8142885.html)
+
+2 [各版本shadowsocks客户端下载地址](https://www.flyzy2005.com/fan-qiang/shadowsocks/ss-clients-download/)
+
+3 [搬瓦工一键搭建 ss 手把手教你搭建自己的 ss 翻墙服务器](https://www.diycode.cc/topics/1247)
+
+4 [https://justmysocks.net/members/index.php](https://justmysocks.net/members/index.php)
